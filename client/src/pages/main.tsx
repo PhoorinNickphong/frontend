@@ -1,11 +1,11 @@
-import "'./App.css'";
+import "./main.css";
 
 function App() {
   return(
     <html>
       <head>
         <title>UniAct</title>
-        <link rel="stylesheet" href="landing.css"></link>
+        <link rel="stylesheet" href="main.css"></link>
         <link 
         href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"  
         rel="stylesheet">
