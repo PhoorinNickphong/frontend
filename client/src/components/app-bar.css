@@ -1,0 +1,33 @@
+
+
+
+.logo{
+  width: 80px;
+  
+}
+
+.logo2{
+  width: 100%;
+  display: inline-block;
+  
+}
+
+.Box-Search{
+  margin-right: 20px;
+  border: 2px solid #0045a4;
+  border-radius: 20px;
+  min-width: 50px;
+}
+
+
+.container{
+  background-color: #ffffff;
+}
+
+.text-search{
+  color: #0045a4;
+}
+
+a{
+  width: 100px ;
+}
