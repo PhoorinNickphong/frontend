@@ -37,7 +37,7 @@ function App() {
             <h2>กิจกรรมที่เปิดอยู่</h2>
         </div>
         <div className="card">
-           <img className="image" src=""></img>
+           <img className="image" src="./image/img0.jpg"></img>
            <h2>ค่ายออนไลน์</h2>
            <p className="textcard">รายละเอียดของค่าย</p>
             <a className="button1" href="#">Readmore</a>
