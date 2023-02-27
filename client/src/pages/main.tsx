@@ -1,10 +1,11 @@
-import "./main.css";
+import "./pages/main.css";
+import ActivityCard from "../components/activity-card";
+import ActivityAppBar from "../components/app-bar"
 
-function App() {
+function MainPage() {
   return(
     <html>
       <head>
-        <title>UniAct</title>
         <link rel="stylesheet" href="main.css"></link>
         <link 
         href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"  
@@ -12,9 +13,7 @@ function App() {
         </link>
       </head>
       <body>
-        <div className="box0">
-            <h2>UniAct</h2>
-        </div>
+      <ActivityAppBar></ActivityAppBar>
         <div className="emp">
             <p>
                 <label>ลงทะเบียนเข้าร่วมกิจกรรม</label>
@@ -29,19 +28,46 @@ function App() {
         <div  className="box2">
             <h2>หมวดหมู่</h2>
         </div>
-        <a className="button0">ค่ายทั้งหมด</a> 
-        <a className="button"  href="#">ค่ายออนไลน์</a>
-        <a className="button"  href="#">ค่ายลงพื้นที่</a>
-        <a className="button"  href="#">ค่ายวิชาการ</a>
+        <a className="button0" href="#all activity">ค่ายทั้งหมด</a> 
+        <a className="button"  href="#online camp">ค่ายออนไลน์</a>
+        <a className="button"  href="#field camp">ค่ายลงพื้นที่</a>
+        <a className="button"  href="#academic camp">ค่ายวิชาการ</a>
         <div  className="box2">
-            <h2>กิจกรรมที่เปิดอยู่</h2>
+            <h2 id="all activity">กิจกรรมที่เปิดอยู่</h2>
         </div>
-        <div className="card">
-           <img className="image" src="./image/img0.jpg"></img>
-           <h2>ค่ายออนไลน์</h2>
-           <p className="textcard">รายละเอียดของค่าย</p>
-            <a className="button1" href="#">Readmore</a>
+        <div className="grid">
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
         </div>
+        
+        <div className="line">
+          <h1 id="online camp">ค่ายออนไลน์</h1>
+        </div>
+        <div className="grid">
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
+        </div>
+
+        <div className="line">
+          <h1 id="field camp">ค่ายลงพื้นที่</h1>
+        </div>
+        <div className="grid">
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
+        </div>
+
+        <div className="line">
+          <h1 id="academic camp">ค่ายวิชาการ</h1>
+        </div>
+        <div className="grid">
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
+          <ActivityCard></ActivityCard>
+        </div>
+        
         <div  className="box3">
         </div>
       </body>
@@ -49,4 +75,4 @@ function App() {
   )
 }
 
-export default App;
+export default MainPage;
