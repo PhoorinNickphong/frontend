@@ -18,7 +18,7 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 
 
-const pages = ['Home','Activity', 'Status', 'Contact'];
+const pages = ['Home','Status', 'Contact'];
 const settings = ['Account', 'Activity history', 'Logout'];
 
 const Search = styled('div')(({ theme }) => ({
