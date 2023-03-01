@@ -1,4 +1,4 @@
-import "./pages/main.css";
+import "../pages/main.css";
 import ActivityCard from "../components/activity-card";
 import ActivityAppBar from "../components/app-bar"
 

@@ -1,4 +1,4 @@
-import "../src/pages/register.css"
+import "../pages/register.css"
 
 function Register() {
   return (

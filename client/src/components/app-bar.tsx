@@ -84,6 +84,7 @@ function ActivityAppBar() {
     setAnchorElUser(null);
   };
   
+  
 
   return (
     <AppBar  position="static" color='inherit' >

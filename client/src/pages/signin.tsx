@@ -1,7 +1,7 @@
-import "./sign.css"
+import "../pages/sign.css"
 
 
-function signin() {
+function Signin() {
   return (
       
       <html lang="en">
@@ -37,4 +37,4 @@ function signin() {
 
   )}
 
-export default signin;
+export default Signin;

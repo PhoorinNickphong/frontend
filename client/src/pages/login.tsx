@@ -1,6 +1,6 @@
-import './pages/login.css';
+import '../pages/login.css';
 
-function App() {
+function Login() {
   return (
 
     <html lang="en">
@@ -59,4 +59,4 @@ function App() {
 }
 
 
-export default App;
+export default Login;

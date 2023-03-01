@@ -1,4 +1,4 @@
-import "./pages/statuspage.css";
+import "../pages/status.css";
 import ActivityAppBar from "../components/app-bar"
 import StatusCard from "../components/statuscard";
 

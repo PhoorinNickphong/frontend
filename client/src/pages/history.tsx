@@ -1,6 +1,6 @@
-import "./pages/history.css";
+import "../pages/history.css";
 import ActivityAppBar from "../components/app-bar"
-function Status() {
+function History() {
   return(
    <html>
     <ActivityAppBar></ActivityAppBar>
@@ -20,4 +20,4 @@ function Status() {
   )
 }
 
-export default Status;
+export default History;
