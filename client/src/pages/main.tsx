@@ -1,6 +1,12 @@
 import "../pages/main.css";
 import ActivityCard from "../components/activity-card";
 import ActivityAppBar from "../components/app-bar"
+import ContactCard from "../components/contactcard/contact-card";
+import ContactCard2 from "../components/contactcard/contact-card2";
+import ContactCard3 from "../components/contactcard/contact-card3";
+import ContactCard4 from "../components/contactcard/contact-card4";
+import ContactCard5 from "../components/contactcard/contact-card5";
+import ContactCard6 from "../components/contactcard/contact-card6";
 
 function MainPage() {
   return(
@@ -67,7 +73,20 @@ function MainPage() {
           <ActivityCard></ActivityCard>
           <ActivityCard></ActivityCard>
         </div>
-        
+        <div className="boxCont">
+            <h2>ติดต่อ</h2>
+        </div>
+        <div  className="boxCont2">
+            <h2>ช่องทางการติดต่อ</h2>
+        </div>
+        <div className="grid">
+          <ContactCard></ContactCard>
+          <ContactCard2></ContactCard2>
+          <ContactCard3></ContactCard3>
+          <ContactCard4></ContactCard4>
+          <ContactCard5></ContactCard5>
+          <ContactCard6></ContactCard6>
+        </div>
         <div  className="box3">
         </div>
       </body>
