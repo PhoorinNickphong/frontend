@@ -170,11 +170,11 @@ html{
 
 .grid{
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr ;
-    margin-left: 8%;
-    margin-right: 8%;
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: 3fr 3fr 3fr ;
+    margin-left: 2%;
+    margin-right: 0%;
+    column-gap: 1%;
+    row-gap: 1%;
 }
 
 
