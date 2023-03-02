@@ -1,7 +1,41 @@
+import { useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom';
+
+
 import "../sign.css"
 
+const initialUser = { email: '', password: '', username: '' };
 
 function signup() {
+    const [user, setUser] = useState(initialUser)
+    const navigate = useNavigate();
+
+    const handleSignup = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        console.log(user);
+        const url = "http://localhost:1337/api/auth/local/register";
+        try {
+          if (user.email && user.password && user.username) {
+            const res = await axios.post(url, user)
+            console.log(res.data)
+            navigate('/login', { replace: true })
+        }
+      }catch(err) {
+        toast.error("Invalid email or password", {
+          hideProgressBar: true
+        })
+      }}
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setUser({
+        ...user,
+          [name]: value,
+        });
+      };
+
   return (
       
       <html lang="en">
@@ -21,10 +55,10 @@ function signup() {
               </div>
               <p className="msg">signup with @psu.ac.th account</p>
               <div className='form'>
-                  <form action="" method="post">
-                      <input type="text" placeholder='Usename' className='text' id='username' required/><br/><br/>
-                      <input type="email" placeholder='Email' className='text' id='email' required/><br/>
-                      <input type="password" placeholder='Password' className='password'/><br/>
+                  <form action="http://localhost:1337/api/auth/local/register" method="post" onSubmit={handleSignup}>
+                      <input type="text" placeholder='Usename' name='username' className='text' id='username' onChange={handleChange} required/><br/><br/>
+                      <input type="email" placeholder='Email' name='email' className='text' id='email' onChange={handleChange} required/><br/>
+                      <input type="password" placeholder='Password' name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
                       <a href="/#" className='btn-login' id='do-login'>Sign up</a>
                       <a href="/#" className='forgot'>Login?</a>

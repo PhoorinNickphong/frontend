@@ -63,9 +63,9 @@ function Signin() {
               </div>
               <p className="msg">signin with @psu.ac.th account</p>
               <div className='form'>
-                  <form action="" method="post" onSubmit={handleLogin}>
-                      <input type="email" placeholder='Email' className='text' id='username' onChange={handleChange} required/><br/>
-                      <input type="password" placeholder='Password' className='password' onChange={handleChange} required/><br/>
+                  <form action="http://localhost:1337/api/auth/local" method="post" onSubmit={handleLogin}>
+                      <input type="email" placeholder='Email'name='identifier' className='text' id='username' onChange={handleChange} required/><br/>
+                      <input type="password" placeholder='Password'name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
                       <a href="/#" className='btn-login' id='do-login'>Login</a>
                       <a href="/#" className='forgot'>sign up</a>
