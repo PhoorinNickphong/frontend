@@ -10,10 +10,10 @@ function App() {
     <BrowserRouter>
       <Routes>       
         <Route path="/" element={<MainPage />}  />
-       {/*  <Route path="/sigin" element={ <Signin />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/Status" element={<Status />} />
-        <Route path="/history" element={<History />} /> */}
+        {/* <Route path="/signin" element={ <Signin />} />
+        <Route path="/register" element={<Register />} /> */}
+        <Route path="/status" element={<Status />} />
+        <Route path="/history" element={<History />} />
       </Routes>
     </BrowserRouter>
 

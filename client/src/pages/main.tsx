@@ -74,7 +74,7 @@ function MainPage() {
           <ActivityCard></ActivityCard>
         </div>
         <div className="boxCont">
-            <h2>ติดต่อ</h2>
+            <h2 id='contact'>ติดต่อ</h2>
         </div>
         <div  className="boxCont2">
             <h2>ช่องทางการติดต่อ</h2>

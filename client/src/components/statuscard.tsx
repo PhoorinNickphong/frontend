@@ -16,7 +16,7 @@ function StatusCard() {
           image="https://ichef.bbci.co.uk/news/640/cpsprodpb/1496F/production/_116553348_mansleepsgettyimages.png"
           alt="Image"
         />
-        <CardContent className='box'>
+        <CardContent className='box100'>
           <Typography gutterBottom variant="h5" component="div">
             <p className='text3'>Activity name</p>
           </Typography>

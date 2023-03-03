@@ -16,10 +16,12 @@ import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+import Link from "@mui/material/Link";
 
 
-const pages = ['Home','Status', 'Contact'];
-const settings = ['Account', 'Activity history', 'Logout'];
+
+const pages: [string, string][] = [['Home', '/'], ['Status', '/status'], ['Contact', '#contact']]
+const settings: [string, string][] = [['Account',''], ['History','/history'], ['Logout','']];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -139,8 +141,8 @@ function ActivityAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page[0]} onClick={handleCloseNavMenu} component={Link} href={page[1]}>
+                  <Typography textAlign="center">{page[0]}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -167,11 +169,12 @@ function ActivityAppBar() {
           <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'}}}>
             {pages.map((page) => (
               <Button className='buttom'
-                key={page}
+                key={page[0]}
+                href={page[1]}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#0045a4', display: 'block' ,fontFamily: '"Kanit", sans-serif'}}
               >
-                {page}
+                {page[0]}
               </Button>
             ))}
           </Box>
@@ -209,8 +212,8 @@ function ActivityAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting[0]} onClick={handleCloseUserMenu} component={Link} href={setting[1]}>
+                  <Typography textAlign="center">{setting[0]}</Typography>
                 </MenuItem>
               ))}
             </Menu>

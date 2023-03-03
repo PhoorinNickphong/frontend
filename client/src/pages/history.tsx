@@ -9,7 +9,7 @@ function History() {
           rel="stylesheet"
         />
     <body>
-    <div className="box">
+    <div className="box99">
             <p>
                 <label>ลงทะเบียนเข้าร่วมกิจกรรม</label>
             </p>  
