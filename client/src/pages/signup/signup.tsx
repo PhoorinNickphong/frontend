@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
-
+import Swal from 'sweetalert2'
 
 import "../pages/sign.css"
 
@@ -27,6 +27,14 @@ function Signup() {
           hideProgressBar: true
         })
       }}
+        if (!user.email || !/@(email\.psu\.ac\.th|psu\.ac\.th)$/.test(user.email)) {
+          Swal.fire({
+            icon: 'error',
+            title: 'ข้อมูลผิดพลาด',
+            text: 'กรุณากรอกอีเมลล์ PSU',
+        });
+        return;
+      }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
