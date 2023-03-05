@@ -56,7 +56,7 @@ function Signin() {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant:400,700" />
           <link rel="stylesheet" href="./pages/signin.css" />
       </head>
-      <body>
+      <body className='body1'>
           <section className="login" id="login">
               <div className="head">
                   <h1 className="company">Login</h1>
@@ -67,8 +67,8 @@ function Signin() {
                       <input type="email" placeholder='Email'name='identifier' className='text' id='username' onChange={handleChange} required/><br/>
                       <input type="password" placeholder='Password'name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
-                      <a href="/#" className='btn-login' id='do-login'>Login</a>
-                      <a href="/#" className='forgot'>sign up</a>
+                      <a href="" className='btn-login' id='do-login'>Login</a>
+                      <a href="/signup" className='forgot'>sign up</a>
                   </form>
               </div>
           </section>

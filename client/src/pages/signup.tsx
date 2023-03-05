@@ -4,11 +4,11 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
 
 
-import "../sign.css"
+import "../pages/sign.css"
 
 const initialUser = { email: '', password: '', username: '' };
 
-function signup() {
+function Signup() {
     const [user, setUser] = useState(initialUser)
     const navigate = useNavigate();
 
@@ -48,7 +48,7 @@ function signup() {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant:400,700" />
           <link rel="stylesheet" href="./pages/signin.css" />
       </head>
-      <body>
+      <body className='body1'>
           <section className="login" id="login">
               <div className="head">
                   <h1 className="company">Register</h1>
@@ -60,8 +60,8 @@ function signup() {
                       <input type="email" placeholder='Email' name='email' className='text' id='email' onChange={handleChange} required/><br/>
                       <input type="password" placeholder='Password' name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
-                      <a href="/#" className='btn-login' id='do-login'>Sign up</a>
-                      <a href="/#" className='forgot'>Login?</a>
+                      <a href="/signup" className='btn-login' id='do-login'>Sign up</a>
+                      <a href="/sigin" className='forgot'>Login?</a>
                   </form>
               </div>
           </section>
@@ -72,4 +72,4 @@ function signup() {
 
   )}
 
-export default signup;
+export default Signup;

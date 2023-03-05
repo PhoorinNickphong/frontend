@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import logo2 from './images/logo5.png';
-import './components/login-bar.css';
+import '../components/login-bar.css';
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -10,16 +10,15 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+import Link from "@mui/material/Link";
 
-
-const pages = ['Home', 'Status', 'Contact'];
+const pages: [string, string][] = [['Home', '/'], ['Status', '/status'], ['Contact', '#contact']]
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -131,7 +130,7 @@ function LoginAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page[0]} onClick={handleCloseNavMenu} component={Link} href={page[1]}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -159,7 +158,8 @@ function LoginAppBar() {
           <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'}}}>
             {pages.map((page) => (
               <Button className='buttom'
-                key={page}
+                key={page[0]}
+                href={page[1]}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#0045a4', display: 'block' ,fontFamily: '"Kanit", sans-serif'}}
               >
@@ -180,7 +180,7 @@ function LoginAppBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <Button /* onClick={} */ sx={{ p: 0 }} className="button-lohgin">
+              <Button  href={"/sigin"} onClick={handleCloseNavMenu} sx={{ p: 0 }} className="button-login">
                 <div className='login-text'>LOGIN</div>
               </Button>
             </Tooltip>
