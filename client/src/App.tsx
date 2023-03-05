@@ -1,12 +1,11 @@
 
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
-import MainPage from './pages/main';
-import Status from './pages/status';
-import Register from './pages/register';
-import History from './pages/history';
-import Signin from './pages/signin';
-import MainLog from './pages/mainxlog';
-import Signup from './pages/signup';
+import MainPage from './pages/main/main';
+import Status from './pages/status/status';
+import History from './pages/history/history';
+import Signin from './pages/signin/signin';
+import MainLog from './pages/main/mainxlog';
+import Signup from './pages/signup/signup';
 
 
 
