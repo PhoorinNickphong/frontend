@@ -1,6 +1,25 @@
 import "../pages/register.css"
+import { useState } from 'react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
+
+const regisUser = { email: '', password: '', username: '' };
 function Register() {
+  const [user, setUser] = useState(regisUser)
+  const MySwal = withReactContent(Swal)
+  const handleSignup = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    console.log(user);
+    if (!user.email || !/@(email\.psu\.ac\.th|psu\.ac\.th)$/.test(user.email)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'ข้อมูลผิดพลาด',
+        text: 'กรุณากรอกอีเมลล์ PSU',
+      });
+      return;
+    }
+  };
   return (
 
     <html lang="en">
@@ -49,7 +68,7 @@ function Register() {
                       <input type="Password" name="password"className="input2" required/>
                     </p>
                     <p>
-                      <button type="submit" className="submit">ลงทะเบียน</button>
+                      <button type="submit" className="submit" onClick={handleSignup}>ลงทะเบียน</button>
                     </p>
                   </form>
                 </div>
