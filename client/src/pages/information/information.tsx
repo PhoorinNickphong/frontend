@@ -1,5 +1,5 @@
 import "./information.css"
-import ActivityAppBar from "../components/app-bar"
+import ActivityAppBar from "../../components/app-bar"
 
 function information() {
     return(

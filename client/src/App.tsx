@@ -16,11 +16,9 @@ function App() {
       <Routes>
         <Route index element={<MainLog/>} />      
         <Route path="/main" element={<MainPage />}  />
-        {/* <Route path="/signin" element={ <Signin />} />
-        <Route path="/register" element={<Register />} /> */}
         <Route path="/status" element={<Status />} />
         <Route path="/history" element={<History />} />
-        <Route path="/sigin" element={<Signin />} />
+        <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </BrowserRouter>

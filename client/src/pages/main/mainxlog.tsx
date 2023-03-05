@@ -1,12 +1,12 @@
-import "../pages/main.css";
-import ActivityCard from "../components/activity-card";
-import ContactCard from "../components/contactcard/contact-card";
-import ContactCard2 from "../components/contactcard/contact-card2";
-import ContactCard3 from "../components/contactcard/contact-card3";
-import ContactCard4 from "../components/contactcard/contact-card4";
-import ContactCard5 from "../components/contactcard/contact-card5";
-import ContactCard6 from "../components/contactcard/contact-card6";
-import LoginAppBar from "../components/login-bar";
+import "./main.css";
+import ActivityCard from "../../components/activity-card";
+import ContactCard from "../../components/contactcard/contact-card";
+import ContactCard2 from "../../components/contactcard/contact-card2";
+import ContactCard3 from "../../components/contactcard/contact-card3";
+import ContactCard4 from "../../components/contactcard/contact-card4";
+import ContactCard5 from "../../components/contactcard/contact-card5";
+import ContactCard6 from "../../components/contactcard/contact-card6";
+import LoginAppBar from "../../components/login-bar";
 
 function MainLog() {
   return(
