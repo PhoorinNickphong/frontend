@@ -15,8 +15,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<MainLog />} />  */}     
-        <Route path="/" element={<MainPage />}  />
+        <Route index element={<MainLog/>} />      
+        <Route path="/main" element={<MainPage />}  />
         {/* <Route path="/signin" element={ <Signin />} />
         <Route path="/register" element={<Register />} /> */}
         <Route path="/status" element={<Status />} />

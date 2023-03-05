@@ -18,7 +18,7 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Link from "@mui/material/Link";
 
-const pages: [string, string][] = [['Home', '/'], ['Status', '/status'], ['Contact', '#contact']]
+const pages: [string, string][] = [['Home', '/'], ['Contact', '#contact']]
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -131,7 +131,7 @@ function LoginAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page[0]} onClick={handleCloseNavMenu} component={Link} href={page[1]}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{page[0]}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -163,7 +163,7 @@ function LoginAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#0045a4', display: 'block' ,fontFamily: '"Kanit", sans-serif'}}
               >
-                {page}
+                {page[0]}
               </Button>
             ))}
           </Box>
