@@ -72,7 +72,7 @@ function Signup(){
                       <input type="password" placeholder='Password' name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
                       <input type="submit" className='btn-login' id='do-login' value="Sign up" />
-                      <a href="/sigin" className='loginmai'>Login?</a>
+                      <a href="/signin" className='loginmai'>Login?</a>
                   </form>
               </div>
           </section>

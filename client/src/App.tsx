@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<MainLog/>} />      
-        <Route path="/main" element={<MainPage />}  />
+        <Route path="/" element={<MainPage />}  />
         <Route path="/status" element={<Status />} />
         <Route path="/history" element={<History />} />
         <Route path="/signin" element={<Signin />} />
