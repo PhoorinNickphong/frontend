@@ -67,7 +67,7 @@ function Signin() {
                       <input type="email" placeholder='Email'name='identifier' className='text' id='username' onChange={handleChange} required/><br/>
                       <input type="password" placeholder='Password'name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
-                      <input type="submit" className='btn-login' id='do-login' value="Sign up" />
+                      <input type="submit" className='btn-login' id='do-login' value="Login" />
                       <a href="/signup" className='signupmai'>sign up</a>
                   </form>
               </div>

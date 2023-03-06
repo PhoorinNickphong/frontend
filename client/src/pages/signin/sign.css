@@ -85,11 +85,11 @@
   color: dimgray;
   transition: 0.5s;
 }
-.login .loginmai {
+.login .signupmai {
   text-decoration: none;
   color: white;
   float: right;
 }
-.loginmai{
+.signupmai{
   text-align: right;
 }
